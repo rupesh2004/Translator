@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAFFFB"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:background="#DAFFFB"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Translator"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="45dp"
+        android:drawableLeft="@drawable/translate"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Enter Text"
+        android:id="@+id/textToTranslate"
+        android:textColorHint="@color/black"
+        android:inputType="textMultiLine"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/fromText"
+            android:textSize="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:text="From : "
+            />
+
+        <Spinner
+            android:id="@+id/fromLanguages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@+id/fromText"
+            android:textSize="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:text="To : "
+            />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:id="@+id/toLanguages"
+            android:layout_below="@id/fromLanguages"
+            android:layout_gravity="center"
+            />
+
+    </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Convert"
+            android:backgroundTint="#04364A"
+            android:onClick="translate_language"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:text="Translated Text"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+
+            android:id="@+id/translatedText"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
